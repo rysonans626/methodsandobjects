@@ -1,14 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        Book Moomin = new Book("Moomin", "Toove Jansson", 1969);
-        System.out.println("Moomin.name = " + Moomin.name);
-        System.out.println("Moomin.author = " + Moomin.author);
-        System.out.println("Moomin.getAge() = " + Moomin.getName());
-        System.out.println("Moomin.getAge() = " + Moomin.getAuthor());
-        Moomin.setAge(2000);
-        System.out.println("Moomin.age = " + Moomin.age);
-        Author Toove = new Author("Toove", "Jansson");
-        System.out.println("Toove.Name = " + Toove.Name);
-        System.out.println("Toove.LastName = " + Toove.LastName);
+        Author author1 = new Author("Toove", "Jansson");
+        Author author2 = new Author("Fedor", "Dostoevskiy");
+        Book book1 = new Book("Moomin", author1, 1969);
+        Book book2 = new Book("Idiot", author2, 1867);
+        System.out.println(book1.getName() + " " + book1.getAuthor().getName() + " " + book1.getAuthor().getLastName()+ " " + book1.getAge());
+        System.out.println(book2.getName() + " " + book2.getAuthor().getName() + " " + book2.getAuthor().getLastName()+ " " + book2.getAge());
+        book1.setAge(2004);
+        System.out.println("изменненая дата публикации первой книги - " + book1.getAge());
     }
 }

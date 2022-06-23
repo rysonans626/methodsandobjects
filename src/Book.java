@@ -1,21 +1,27 @@
-import java.time.Year;
-
 public class Book {
-    String name;
-    String author;
-    int age;
-    public  Book (String name, String author, int age){
+    private String name;
+    private Author author;
+    private int age;
+
+    public Book(String name, Author author, int age) {
         this.name = name;
         this.author = author;
-        this.age= age;
+        this.age = age;
     }
+
     public String getName() {
-        return this.name;
+        return name;
     }
-    public int getAuthor(){
-        return this.age;
+
+    public Author getAuthor() {
+        return author;
     }
-    public void setAge (int age){
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
         this.age = age;
     }
 }
